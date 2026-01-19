@@ -1,4 +1,11 @@
 package com.research.repository;
 
-public class ScheduledTransferRepository {
+import com.research.model.ScheduledTransfer;
+
+public class ScheduledTransferRepository extends InMemoryBaseRepository<ScheduledTransfer> {
+
+    @Override
+    protected int getId(ScheduledTransfer entity) {
+        return entity.getId();
+    }
 }

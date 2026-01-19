@@ -1,4 +1,11 @@
 package com.research.repository;
 
-public class ChannelRepository {
+import com.research.model.TransactionChannel;
+
+public class ChannelRepository extends InMemoryBaseRepository<TransactionChannel> {
+
+    @Override
+    protected int getId(TransactionChannel entity) {
+        return entity.getId();
+    }
 }
